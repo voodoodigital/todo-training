@@ -16,6 +16,8 @@
     <script src="js/script.js" defer></script>
 </head>
 
+
+
 <body>
 
     <!-- main web applicatio UI layout -->
@@ -23,10 +25,24 @@
     <!-- you only have to main layout of the web application -->
     <!-- use bootstrap for the lay out -->
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="col-12 p-0">
-            <div class="row m-0">
-                test
+            <div class="row p-2" style="background-color:brown">
+
+                <?php
+
+                for ($i = 0; $i < 6; $i++) {
+                ?>
+                    <div class="col-4 rounded-4 offset-4 p-3 my-2 bg-danger ">
+                        <div class="w-100 justify-content-between d-flex">
+                            <div>TODO LIST TITLE</div>
+                            <div>TIME</div>
+                        </div>
+                    </div>
+                <?php
+                }
+
+                ?>
             </div>
         </div>
     </div>
