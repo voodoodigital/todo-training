@@ -15,7 +15,7 @@ for ($i=0; $i < $result->num_rows; $i++) {
     $todoObject=new stdClass();
     $todoObject->todo=$data["todo"];
     $todoObject->time=$data["due_datetime"];
-    array_push($responseArray, $todoObject);    
+    array_push($responseArray, $todoObject);
 }
 
 $responseJsonText = json_encode($responseArray); // for arrays and objects
@@ -24,5 +24,3 @@ echo ($responseJsonText);
 $conn->close();
 
 ?>
-
-
