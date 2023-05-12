@@ -55,9 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row m-0 p-2 flex-grow-1 overflow-auto" id="todoContainer">
-
-            </div>
+            <div class="row m-0 p-2 flex-grow-1 overflow-auto" id="todoContainer"></div>                
         </div>
     </div>
 
