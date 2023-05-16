@@ -32,20 +32,23 @@
                     <div class="row m-0 p-3 text-white">
                         <div class="col-12 p-0 rounded-3 p-3 shadow bg-primary">
                             <div class="row m-0">
+                                <!-- title -->
                                 <label class="fw-bold fs-6">Todo title</label>
                                 <input type="text" class="form-control" id="todo">
                                 <div class="col-12 p-0">
                                     <div class="row m-0">
                                         <div class="col-6 p-0">
+                                            <!-- date -->
                                             <div class="row m-0 pe-2">
-                                                <label class="fw-bold fs-6">Due datetime</label>
+                                                <label class="fw-bold fs-6">Due date</label>
                                                 <input type="date" class="form-control" id="date">
                                             </div>
                                         </div>
                                         <div class="col-6 p-0">
+                                            <!-- time -->
                                             <div class="row m-0 ps-2">
-                                                <label class="fw-bold fs-6">Due datetime</label>
-                                                <input type="time" class="form-control" id="time">
+                                                <label class="fw-bold fs-6">Due time</label>
+                                                <input type="time" class="form-control" id="time"> 
                                             </div>
                                         </div>
                                     </div>
