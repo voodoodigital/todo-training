@@ -24,7 +24,7 @@ function request() {
   };
   request.open(
     "GET",
-    "http://localhost/abc/Voodoo/todo-training/api/todoReadProcess.php",
+    "http://localhost/voodooDigital/study/todo-training/api/todoReadProcess.php",
     true
   );
   request.send();

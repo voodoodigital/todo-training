@@ -1,6 +1,6 @@
 <?php
 
-$conn = new mysqli('localhost', 'root', '', 'todo_training_voodoo');
+$conn = new mysqli('localhost', 'root', 'JanithNirmal12#$', 'todo_training_voodoo');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
