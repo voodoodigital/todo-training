@@ -12,8 +12,9 @@ class DB
     {
         $host = 'localhost';
         $user = 'root';
-        $password = 'JanithNirmal12#$'; //  Janith
-        $database = 'todolist-training1'; //  Janith
+        // $password = 'JanithNirmal12#$'; //  Janith
+        $password = 'Assiment@1234ABC'; // kavindu
+        $database = 'todo_training_voodoo'; //  Janith
 
 
         $this->host = $host;
