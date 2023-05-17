@@ -16,18 +16,49 @@
     <script src="js/script.js" defer></script>
 </head>
 
-<body>
+
+
+<body style="height: 100vh;">
 
     <!-- main web applicatio UI layout -->
     <!-- develop your UI here -->
     <!-- you only have to main layout of the web application -->
     <!-- use bootstrap for the lay out -->
 
-    <div class="container-fluid">
-        <div class="col-12 p-0">
+    <div class="container h-100">
+        <div class="col-12 p-0 h-100 d-flex flex-column">
             <div class="row m-0">
-                test
+                <div class="col-6 offset-3 p-0 my-2">
+                    <div class="row m-0 p-3 text-white">
+                        <div class="col-12 p-0 rounded-3 p-3 shadow bg-primary">
+                            <div class="row m-0">
+                                <!-- title -->
+                                <label class="fw-bold fs-6">Todo title</label>
+                                <input type="text" class="form-control" id="todo">
+                                <div class="col-12 p-0">
+                                    <div class="row m-0">
+                                        <div class="col-6 p-0">
+                                            <!-- date -->
+                                            <div class="row m-0 pe-2">
+                                                <label class="fw-bold fs-6">Due date</label>
+                                                <input type="date" class="form-control" id="date">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <!-- time -->
+                                            <div class="row m-0 ps-2">
+                                                <label class="fw-bold fs-6">Due time</label>
+                                                <input type="time" class="form-control" id="time"> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="row m-0 p-2 flex-grow-1 overflow-auto" id="todoContainer"></div>                
         </div>
     </div>
 
