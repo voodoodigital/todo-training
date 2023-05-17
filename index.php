@@ -48,11 +48,16 @@
                                             <!-- time -->
                                             <div class="row m-0 ps-2">
                                                 <label class="fw-bold fs-6">Due time</label>
-                                                <input type="time" class="form-control" id="time"> 
+                                                <input type="time" class="form-control" id="time">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-12 p-0 d-flex justify-content-end">
+                                <div class="row m-0 pt-3">
+                                    <div id="todoAdd" class="px-3 px-2 btn btn-success shadow">Add</div>
+                                </div>   
                             </div>
                         </div>
                     </div>
