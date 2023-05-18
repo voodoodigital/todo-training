@@ -33,6 +33,7 @@ class Validator
         'amount' => true,
         'importance_id' => true,
         'date' => true,
+        'time' => true,
         'type_id' => true,
     );
 
@@ -79,7 +80,18 @@ class Validator
         // Check if input contains only letters, numbers, underscores, and dashes
         if (!preg_match('/^[\w\s.,!?-]*$/', $input)) {
             // input contains invalid characters
-            return "wrong input.";
+            return "wrong cutom input";
+        }
+    }
+    public function timeValidation($input)
+    {
+        // Remove whitespace from beginning and end of name
+        $input = trim($input);
+
+        // Check if input contains only letters, numbers, underscores, and dashes
+        if (!preg_match('/^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/', $input)) {
+            // input contains invalid characters
+            return "Invalid time input";
         }
     }
     public function dateValidator($input)
