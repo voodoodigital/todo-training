@@ -26,7 +26,7 @@ CREATE TABLE `status` (
   `id` int NOT NULL AUTO_INCREMENT,
   `status` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,6 +35,7 @@ CREATE TABLE `status` (
 
 LOCK TABLES `status` WRITE;
 /*!40000 ALTER TABLE `status` DISABLE KEYS */;
+INSERT INTO `status` VALUES (0,'todo'),(1,'done');
 /*!40000 ALTER TABLE `status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +63,7 @@ CREATE TABLE `todo` (
 
 LOCK TABLES `todo` WRITE;
 /*!40000 ALTER TABLE `todo` DISABLE KEYS */;
-INSERT INTO `todo` VALUES (1,'create to list project','2022-10-24 20:24:36',0),(2,'do something','2022-10-24 20:24:36',0),(3,'do nothing','2022-10-24 20:24:36',0),(4,'dance','2022-10-24 20:24:36',0),(5,'eat','2022-10-24 20:24:36',0),(6,'run around your house','2022-10-24 20:24:36',0),(7,'call your gf','2022-10-24 20:24:36',0),(8,'do the assignment','2022-10-24 20:24:36',0),(9,'play minecraft','2022-10-24 20:24:36',0),(10,'create a server','2022-10-24 20:24:36',0),(11,'go to the school','2023-05-16 00:25:30',0),(12,'go to the school','2023-05-16 00:25:30',0),(13,'go to the school','2023-05-16 00:25:30',0),(14,'go to the school','2023-05-16 00:25:30',0),(15,'test one two three','2023-05-26 19:26:00',0),(16,'test one two three','2023-05-26 19:26:00',0),(17,'dance and workout','2023-06-02 23:26:00',0),(18,'dance and workout','2023-06-02 23:26:00',0),(19,'workout','2023-05-19 23:26:00',0),(20,'workout','2023-05-19 23:26:00',0),(21,'workout','2023-05-19 23:26:00',0),(22,'panda test','2023-05-10 13:33:00',0),(23,'eat your food asshole','2023-05-24 13:33:00',0);
+INSERT INTO `todo` VALUES (1,'create to list project','2022-10-24 20:24:36',0),(2,'do something','2022-10-24 20:24:36',0),(3,'do nothing','2022-10-24 20:24:36',0),(4,'dance','2022-10-24 20:24:36',0),(5,'eat','2022-10-24 20:24:36',0),(6,'run around your house','2022-10-24 20:24:36',0),(7,'call your gf','2022-10-24 20:24:36',0),(8,'do the assignment','2022-10-24 20:24:36',0),(9,'play minecraft','2022-10-24 20:24:36',0),(10,'create a server','2022-10-24 20:24:36',0),(11,'go to the school','2023-05-16 00:25:30',0),(12,'go to the school','2023-05-16 00:25:30',0),(13,'go to the school','2023-05-16 00:25:30',1),(14,'go to the school','2023-05-16 00:25:30',1),(15,'test one two three','2023-05-26 19:26:00',1),(16,'test one two three','2023-05-26 19:26:00',1),(17,'dance and workout','2023-06-02 23:26:00',1),(18,'dance and workout','2023-06-02 23:26:00',1),(19,'workout','2023-05-19 23:26:00',1),(20,'workout','2023-05-19 23:26:00',1),(21,'workout','2023-05-19 23:26:00',1),(22,'panda test','2023-05-10 13:33:00',1),(23,'eat your food asshole','2023-05-24 13:33:00',1);
 /*!40000 ALTER TABLE `todo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -75,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-19 13:36:26
+-- Dump completed on 2023-05-19 16:46:52
