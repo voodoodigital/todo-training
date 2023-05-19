@@ -21,6 +21,10 @@ foreach ($errors as $key => $value) {
     }
 }
 
+date_default_timezone_set('Asia/Colombo');
+$currentDateTime = new DateTime();
+$formattedDateTime = $currentDateTime->format('Y-m-d H:i:s');
+
 $todo = $requestObject->todo;
 $date = $requestObject->date;
 $time = $requestObject->time;
