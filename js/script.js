@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", todoLoader);
 
 // const ROOT_URL = "http://localhost/abc/Voodoo/todo-training/";//Shenal
-// const ROOT_URL = "http://localhost/voodooDigital/study/todo-training/"; //Janith
-const ROOT_URL = "http://localhost/todo-training/"; //kavindu
+const ROOT_URL = "http://localhost/voodooDigital/study/todo-training/"; //Janith
+// const ROOT_URL = "http://localhost/todo-training/"; //kavindu
 
 function todoLoader() {
   var request = new XMLHttpRequest();
@@ -14,11 +14,12 @@ function todoLoader() {
       var container = document.getElementById("todoContainer");
       for (let index = 0; index < responseArray.length; index++) {
         var dataObject = responseArray[index];
-        var checkedStates = () => {
-         if(states_id==2){
-          return "checked";
-         }
+
+        var checkedStates = "";
+        if (dataObject.status_id == 1) {
+          checkedStates = "checked";
         }
+
         container.innerHTML += `
                 <div class=" col-6 shadow rounded-4 offset-3 p-3 my-2 bg-danger " style="max-height: 100px;">
                     <div class="h-100 text-white fw-bold justify-content-between d-flex">
@@ -74,7 +75,7 @@ function requestTodoAdd(todoData) {
   request.onreadystatechange = function () {
     if (request.readyState == 4) {
       var response = request.responseText;
-      console.log(response)
+      console.log(response);
       var responseObject = JSON.parse(response);
       if (responseObject.status == "success") {
         alert("Inserted");
