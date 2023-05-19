@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", request);
 
+const ROOT_URL = "http://localhost/abc/Voodoo/todo-training/";//Shenal
+// const ROOT_URL = "http://localhost/abc/Voodoo/todo-training/";//Janith
+
 function request() {
   var request = new XMLHttpRequest();
   request.onreadystatechange = function () {
@@ -24,7 +27,7 @@ function request() {
   };
   request.open(
     "GET",
-    "http://localhost/abc/Voodoo/todo-training/api/todoReadProcess.php",
+    ROOT_URL+"api/todoReadProcess.php",
     true
   );
   request.send();
@@ -61,7 +64,7 @@ function requestTodoAdd() {
   };
 
   var insertTodo = JSON.stringify(todoData);
-  request.open("POST", "http://localhost/abc/Voodoo/todo-training/api/todoAddProcess.php", true);
+  request.open("POST", ROOT_URL+"api/todoAddProcess.php", true);
   request.send();
 
 };
