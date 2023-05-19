@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", todoLoader);
 
 // const ROOT_URL = "http://localhost/abc/Voodoo/todo-training/";//Shenal
-const ROOT_URL = "http://localhost/voodooDigital/study/todo-training/"; //Janith
-// const ROOT_URL = "http://localhost/todo-training/"; //kavindu
+// const ROOT_URL = "http://localhost/voodooDigital/study/todo-training/"; //Janith
+const ROOT_URL = "http://localhost/todo-training/"; //kavindu
 
 function todoLoader() {
   var request = new XMLHttpRequest();
@@ -33,6 +33,7 @@ function todoLoader() {
                       <div class="col-12 d-flex justify-content-end align-items-end">
                           <div class="form-check form-switch">
                               <input id="${dataObject.id}" onchange="statusChanger(event);" class="form-check-input" type="checkbox" role="switch" id="IstaskComplete" ${checkedStates}>
+                              <button id="${dataObject.id}"  class="btn btn-success">Delete</button>
                           </div>
       
                       </div>
