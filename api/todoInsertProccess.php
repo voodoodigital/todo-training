@@ -27,8 +27,9 @@ $time = $requestObject->time;
 
 $datetime = $date . " " . $time;
 
+
 $database = new DB();
-$query = "INSERT INTO `todo` (`todo`,`due_datetime`, `status_id`) VALUES (?,?, 0)";
+$query = "INSERT INTO `todo` (`todo`,`due_datetime`,`status_id`) VALUES (?,?,0)";
 $stmt1 = $database->prepare($query, "ss", array($todo, $datetime));
 
 $responseObject->status = "success";
