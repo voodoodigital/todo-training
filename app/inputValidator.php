@@ -35,6 +35,8 @@ class Validator
         'date' => true,
         'time' => true,
         'type_id' => true,
+        'todo_status_id' => true,
+        'todo_id' => true,
     );
 
 
@@ -59,7 +61,7 @@ class Validator
                     $response->$key = $this->slMobileValidator($value);
                 } else if ($key == 'amount') {
                     $response->$key = $this->doubleValidator($value);
-                } else if ($key == 'gender_id' || $key == 'type_id') {
+                } else if ($key == 'todo_id' || $key == 'type_id' || $key == 'todo_status_id') {
                     $response->$key = $this->intValidator($value);
                 } else if ($key == 'date') {
                     $response->$key = $this->dateValidator($value);
