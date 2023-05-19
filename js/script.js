@@ -9,7 +9,6 @@ function todoLoader() {
   request.onreadystatechange = function () {
     if (request.readyState == 4) {
       var response = request.responseText;
-      console.log(response);
       var responseArray = JSON.parse(response);
       var container = document.getElementById("todoContainer");
       for (let index = 0; index < responseArray.length; index++) {
@@ -31,7 +30,7 @@ function todoLoader() {
                       <div class="row">
                       <div class="col-12 d-flex justify-content-end align-items-end">
                           <div class="form-check form-switch">
-                              <input class="form-check-input" type="checkbox" role="switch" id="IstaskComplete" ${checkedStates}>
+                              <input id="${dataObject.id}" onchange="statusChanger(event);" class="form-check-input" type="checkbox" role="switch" id="IstaskComplete" ${checkedStates}>
                               <label class="form-check-label" for="IstaskComplete">Done</label>
                           </div>
       
@@ -75,7 +74,6 @@ function requestTodoAdd(todoData) {
   request.onreadystatechange = function () {
     if (request.readyState == 4) {
       var response = request.responseText;
-      console.log(response);
       var responseObject = JSON.parse(response);
       if (responseObject.status == "success") {
         alert("Inserted");
@@ -88,4 +86,26 @@ function requestTodoAdd(todoData) {
 
   request.open("POST", ROOT_URL + "api/todoInsertProccess.php", true);
   request.send(form);
+}
+
+function statusChanger(event) {
+  var status_id = event.target.checked ? 1 : 0;
+  var requestData = { todo_id: event.target.id, todo_status_id: status_id };
+
+  var request = new XMLHttpRequest();
+  request.onreadystatechange = function () {
+    if (request.readyState == 4) {
+      var response = request.responseText;
+      console.log(response);
+    }
+  };
+
+  request.open(
+    "GET",
+    ROOT_URL +
+      "api/todoStatusChangeProcess.php?statusChangeData=" +
+      JSON.stringify(requestData),
+    true
+  );
+  request.send();
 }

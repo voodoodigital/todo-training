@@ -14,6 +14,8 @@ for ($i = 0; $i < $result->num_rows; $i++) {
     $data = $result->fetch_assoc();
     $todoObject = new stdClass();
     $todoObject->todo = $data["todo"];
+    $todoObject->status_id = $data["status_id"];
+    $todoObject->id = $data["id"];
     $todoObject->time = $data["due_datetime"];
     array_push($responseArray, $todoObject);
 }
