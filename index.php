@@ -9,10 +9,10 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
     <link rel="stylesheet" href="css/style.css">
-
-    <script src="js/bootstrap.bundle.js" defer></script>
+<!-- 
+    <script src="js/bootstrap.bundle.js" defer></script> -->
     <script src="js/script.js" defer></script>
 </head>
 
@@ -48,11 +48,16 @@
                                             <!-- time -->
                                             <div class="row m-0 ps-2">
                                                 <label class="fw-bold fs-6">Due time</label>
-                                                <input type="time" class="form-control" id="time"> 
+                                                <input type="time" class="form-control" id="time">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-12 p-0 d-flex justify-content-end">
+                                <div class="row m-0 pt-3">
+                                    <div id="todoAdd" class="px-3 px-2 btn btn-success shadow">Add</div>
+                                </div>   
                             </div>
                         </div>
                     </div>
