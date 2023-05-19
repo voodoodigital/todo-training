@@ -21,6 +21,10 @@ foreach ($errors as $key => $value) {
     }
 }
 
+date_default_timezone_set('Asia/Colombo');
+$currentDateTime = new DateTime();
+$formattedDateTime = $currentDateTime->format('Y-m-d H:i:s');
+
 $todo = $requestObject->todo;
 $date = $requestObject->date;
 $time = $requestObject->time;
@@ -28,7 +32,7 @@ $time = $requestObject->time;
 $datetime = $date . " " . $time;
 
 $database = new DB();
-$query = "INSERT INTO `todo` (`todo`,`due_datetime`) VALUES (?,?)";
+$query = "INSERT INTO `todo` (`todo`,`due_datetime`,`status_id`) VALUES (?,?,2)";
 $stmt1 = $database->prepare($query, "ss", array($todo, $datetime));
 
 $responseObject->status = "success";
