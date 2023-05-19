@@ -102,9 +102,11 @@ function statusChanger(event) {
 
   request.open(
     "GET",
+
     ROOT_URL +
       "api/todoStatusChangeProcess.php?statusChangeData=" +
       JSON.stringify(requestData),
+
     true
   );
   request.send();
