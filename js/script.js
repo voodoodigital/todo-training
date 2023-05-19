@@ -11,6 +11,8 @@ function todoLoader() {
       var response = request.responseText;
       var responseArray = JSON.parse(response);
       var container = document.getElementById("todoContainer");
+
+      container.innerHTML = "";
       for (let index = 0; index < responseArray.length; index++) {
         var dataObject = responseArray[index];
 
@@ -31,7 +33,6 @@ function todoLoader() {
                       <div class="col-12 d-flex justify-content-end align-items-end">
                           <div class="form-check form-switch">
                               <input id="${dataObject.id}" onchange="statusChanger(event);" class="form-check-input" type="checkbox" role="switch" id="IstaskComplete" ${checkedStates}>
-                              <label class="form-check-label" for="IstaskComplete">Done</label>
                           </div>
       
                       </div>

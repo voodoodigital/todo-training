@@ -6,7 +6,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM todo";
+$sql = "SELECT * FROM todo ORDER BY `id` DESC";
 $result = $conn->query($sql);
 $responseArray = array();
 
