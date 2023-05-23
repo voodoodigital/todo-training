@@ -12,9 +12,9 @@ class DB
     {
         $host = 'localhost';
         $user = 'root';
-        $password = 'JanithNirmal12#$'; //  Janith
+        // $password = 'JanithNirmal12#$'; //  Janith
         // $password = 'Assiment@1234ABC'; // kavindu
-        // $password = '';//Shenal
+        $password = '';//Shenal
         $database = 'todo_training_voodoo'; //  Janith
 
 
