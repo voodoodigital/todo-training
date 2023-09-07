@@ -8,7 +8,6 @@ require("../app/dbQuery.php"); // file navigation is important
 require("../app/inputValidator.php");
 require("../app/errorResponseSender.php");
 
-
 $responseObject = new stdClass();
 
 $validator = new Validator($requestObject);

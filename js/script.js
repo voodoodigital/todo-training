@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", todoLoader);
 
-// const ROOT_URL = "http://localhost/abc/Voodoo/todo-training/";//Shenal
-const ROOT_URL = "http://localhost/voodooDigital/study/todo-training/"; //Janith
+const ROOT_URL = "http://localhost/abc/Voodoo/todo-training/";//Shenal
+// const ROOT_URL = "http://localhost/voodooDigital/study/todo-training/"; //Janith
 // const ROOT_URL = "http://localhost/todo-training/"; //kavindu
 
 function todoLoader() {
